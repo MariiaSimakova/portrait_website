@@ -8,7 +8,7 @@ const pictureSize = (imgSelector) => {
       p.style.display = "none";
     });
   }
-
+  addEventListener("click", () => {});
   function hideImg(block) {
     const img = block.querySelector("img");
     img.src = img.src.slice(0, -6) + ".png";
