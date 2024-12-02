@@ -3,9 +3,9 @@ import { postData } from "../services/requests";
 const forms = () => {
   const form = document.querySelectorAll("form"),
     inputs = document.querySelectorAll("input"),
-    upload = document.querySelectorAll("[name='upload']");
+    upload = document.querySelectorAll("[name='upload']"),
+    select = document.querySelectorAll("select");
 
-  //   checkNumImputs("input[name='user_phone']");
   const message = {
     loading: "Загрузка...",
     success: "Спасибо! Скоро мы с вами свяжемся.",
@@ -26,6 +26,9 @@ const forms = () => {
     });
     upload.forEach((item) => {
       item.previousElementSibling.textContent = "Файл не выбран";
+    });
+    select.forEach((item) => {
+      item.options.selectedIndex = 0;
     });
   };
 
